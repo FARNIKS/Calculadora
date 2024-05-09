@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox minHeight="500.0" minWidth="350.0" prefHeight="616.0" prefWidth="404.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calculadora.CalculadoraController">
+   <children>
+      <HBox alignment="CENTER_LEFT" focusTraversable="true" prefHeight="37.0" prefWidth="364.0">
+         <children>
+            <ImageView fx:id="ivFondo" fitHeight="27.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 23.5; -fx-translate-x: 163; -fx-scale-y: 23; -fx-translate-y: 279; -fx-translate-z: 1;">
+               <image>
+                  <Image url="@../../../media/FondoCalcu.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnMode" mnemonicParsing="false" onMouseClicked="#mouseActionModeTheme" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: transparent; -fx-translate-x: -30;">
+               <graphic>
+                  <ImageView fx:id="ivMode" fitHeight="18.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1.35; -fx-scale-y: 1.4;">
+                     <image>
+                        <Image url="@../../../media/btnModenight.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <HBox.margin>
+                  <Insets bottom="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets left="10.0" right="10.0" />
+         </VBox.margin>
+      </HBox>
+      <VBox>
+         <VBox.margin>
+            <Insets bottom="10.0" left="5.0" right="5.0" />
+         </VBox.margin>
+         <children>
+            <HBox>
+               <children>
+                  <Label fx:id="labelNumberNegative" prefHeight="55.0" prefWidth="11.0" style="-fx-background-color: transparent; -fx-text-fill: #e6e6ec;">
+                     <font>
+                        <Font name="Unispace-Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txfOperation" editable="false" prefHeight="55.0" prefWidth="360.0" promptText="0" style="-fx-background-color: transparent; -fx-text-fill: #e6e6ec;">
+                     <font>
+                        <Font name="Unispace-Bold" size="28.0" />
+                     </font>
+                  </TextField>
+                  <Label fx:id="labelOperationSing" alignment="CENTER" prefHeight="55.0" prefWidth="34.0" style="-fx-text-fill: #e6e6ec;">
+                     <font>
+                        <Font name="Unispace-Bold" size="28.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <TextField fx:id="txfResult" alignment="CENTER_RIGHT" editable="false" prefHeight="45.0" prefWidth="354.0" style="-fx-background-color: transparent; -fx-text-fill: #e6e6ec;">
+               <font>
+                  <Font name="Unispace-Bold" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </TextField>
+         </children>
+      </VBox>
+      <GridPane prefHeight="442.0" prefWidth="372.0">
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btnC" mnemonicParsing="false" onMouseClicked="#mouseClickedButtonsFunctions" onMouseEntered="#mouseEnterButtons" onMouseExited="#mouseExitButtons" style="-fx-background-color: transparent; -fx-scale-x: 0.36; -fx-scale-y: 0.49; -fx-translate-z: 222;">
+               <graphic>
+                  <ImageView fx:id="ivC" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1.35;">
+                     <image>
+                        <Image url="@../../../media/btnC.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor></ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnDivide" mnemonicParsing="false" onMouseClicked="#mouseClickedButtonsOperations" onMouseEntered="#mouseEnterButtons" onMouseExited="#mouseExitButtons" style="-fx-background-color: transparent; -fx-scale-x: 0.36; -fx-scale-y: 0.49;" GridPane.columnIndex="1">
+               <graphic>
+                  <ImageView fx:id="ivDivide" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1.35;">
+                     <image>
+                        <Image url="@../../../media/btnDivide.png" />
+                     </image></ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnMultiply" mnemonicParsing="false" onMouseClicked="#mouseClickedButtonsOperations" onMouseEntered="#mouseEnterButtons" onMouseExited="#mouseExitButtons" style="-fx-background-color: transparent; -fx-scale-x: 0.36; -fx-scale-y: 0.49;" GridPane.columnIndex="2">
+               <graphic>
+                  <ImageView fx:id="ivMultiply" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1.35;">
+                     <image>
+                        <Image url="@../../../media/btnx.png" />
+                     </image></ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnDelete" mnemonicParsing="false" onMouseClicked="#mouseClickedButtonsFunctions" onMouseEntered="#mouseEnterButtons" onMouseExited="#mouseExitButtons" style="-fx-background-color: transparent; -fx-scale-x: 0.36; -fx-scale-y: 0.49;" GridPane.columnIndex="3">
+               <graphic>
+                  <ImageView fx:id="ivDelete" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1.35;">
+                     <image>
+                        <Image url="@../../../media/btnDelete.png" />
+                     </image></ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btn7" mnemonicParsing="false" onMouseClicked="#mouseActionButtonsNumbers" onMouseEntered="#mouseEnterButtons" onMouseExited="#mouseExitButtons" style="-fx-background-color: transparent; -fx-scale-x: 0.36; -fx-scale-y: 0.49;" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fx:id="iv7" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1.35;">
+                     <image>
+                        <Image url="@../../../media/btn7.png" />
+                     </image></ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btn8" mnemonicParsing="false" onMouseClicked="#mouseActionButtonsNumbers" onMouseEntered="#mouseEnterButtons" onMouseExited="#mouseExitButtons" style="-fx-background-color: transparent; -fx-scale-x: 0.36; -fx-scale-y: 0.49;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fx:id="iv8" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1.35;">
+                     <image>
+                        <Image url="@../../../media/btn8.png" />
+                     </image></ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btn9" mnemonicParsing="false" onMouseClicked="#mouseActionButtonsNumbers" onMouseEntered="#mouseEnterButtons" onMouseExited="#mouseExitButtons" style="-fx-background-color: transparent; -fx-scale-x: 0.36; -fx-scale-y: 0.49;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fx:id="iv9" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1.35;">
+                     <image>
+                        <Image url="@../../../media/btn9.png" />
+                     </image></ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnSubtract" mnemonicParsing="false" onMouseClicked="#mouseClickedButtonsOperations" onMouseEntered="#mouseEnterButtons" onMouseExited="#mouseExitButtons" style="-fx-background-color: transparent; -fx-scale-x: 0.36; -fx-scale-y: 0.49;" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fx:id="ivSubtract" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1.35;">
+                     <image>
+                        <Image url="@../../../media/btn-.png" />
+                     </image></ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btn4" mnemonicParsing="false" onMouseClicked="#mouseActionButtonsNumbers" onMouseEntered="#mouseEnterButtons" onMouseExited="#mouseExitButtons" style="-fx-background-color: transparent; -fx-scale-x: 0.36; -fx-scale-y: 0.49;" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fx:id="iv4" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1.35;">
+                     <image>
+                        <Image url="@../../../media/btn4.png" />
+                     </image></ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btn5" mnemonicParsing="false" onMouseClicked="#mouseActionButtonsNumbers" onMouseEntered="#mouseEnterButtons" onMouseExited="#mouseExitButtons" style="-fx-background-color: transparent; -fx-scale-x: 0.36; -fx-scale-y: 0.49;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fx:id="iv5" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1.35;">
+                     <image>
+                        <Image url="@../../../media/btn5.png" />
+                     </image></ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btn6" mnemonicParsing="false" onMouseClicked="#mouseActionButtonsNumbers" onMouseEntered="#mouseEnterButtons" onMouseExited="#mouseExitButtons" style="-fx-background-color: transparent; -fx-scale-x: 0.36; -fx-scale-y: 0.49;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fx:id="iv6" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1.35;">
+                     <image>
+                        <Image url="@../../../media/btn6.png" />
+                     </image></ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnAdd" mnemonicParsing="false" onMouseClicked="#mouseClickedButtonsOperations" onMouseEntered="#mouseEnterButtons" onMouseExited="#mouseExitButtons" style="-fx-background-color: transparent; -fx-scale-x: 0.36; -fx-scale-y: 0.49;" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fx:id="ivAdd" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1.35;">
+                     <image>
+                        <Image url="@../../../media/btn+.png" />
+                     </image></ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btn1" mnemonicParsing="false" onMouseClicked="#mouseActionButtonsNumbers" onMouseEntered="#mouseEnterButtons" onMouseExited="#mouseExitButtons" style="-fx-background-color: transparent; -fx-scale-x: 0.36; -fx-scale-y: 0.49;" GridPane.rowIndex="3">
+               <graphic>
+                  <ImageView fx:id="iv1" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1.35;">
+                     <image>
+                        <Image url="@../../../media/btn1.png" />
+                     </image></ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btn2" mnemonicParsing="false" onMouseClicked="#mouseActionButtonsNumbers" onMouseEntered="#mouseEnterButtons" onMouseExited="#mouseExitButtons" style="-fx-background-color: transparent; -fx-scale-x: 0.36; -fx-scale-y: 0.49;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <graphic>
+                  <ImageView fx:id="iv2" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1.35;">
+                     <image>
+                        <Image url="@../../../media/btn2.png" />
+                     </image></ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="btn3" mnemonicParsing="false" onMouseClicked="#mouseActionButtonsNumbers" onMouseEntered="#mouseEnterButtons" onMouseExited="#mouseExitButtons" style="-fx-background-color: transparent; -fx-scale-x: 0.36; -fx-scale-y: 0.49;" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <graphic>
+                  <ImageView fx:id="iv3" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1.35;">
+                     <image>
+                        <Image url="@../../../media/btn3.png" />
+                     </image></ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="btnEqual" mnemonicParsing="false" onMouseClicked="#mouseClickedButtonsOperations" onMouseEntered="#mouseEnterButtons" onMouseExited="#mouseExitButtons" style="-fx-background-color: transparent; -fx-scale-x: 0.36; -fx-scale-y: 1.05; -fx-translate-y: 45;" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <graphic>
+                  <ImageView fx:id="ivEqual" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 2.6; -fx-scale-y: 1.03; -fx-translate-y: -1;">
+                     <image>
+                        <Image url="@../../../media/btn=.png" />
+                     </image></ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="btn00" mnemonicParsing="false" onMouseClicked="#mouseActionButtonsNumbers" onMouseEntered="#mouseEnterButtons" onMouseExited="#mouseExitButtons" style="-fx-background-color: transparent; -fx-scale-x: 0.36; -fx-scale-y: 0.49;" GridPane.rowIndex="4">
+               <graphic>
+                  <ImageView fx:id="iv00" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1.35;">
+                     <image>
+                        <Image url="@../../../media/btn00.png" />
+                     </image></ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="btn0" mnemonicParsing="false" onMouseClicked="#mouseActionButtonsNumbers" onMouseEntered="#mouseEnterButtons" onMouseExited="#mouseExitButtons" style="-fx-background-color: transparent; -fx-scale-x: 0.36; -fx-scale-y: 0.49;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <graphic>
+                  <ImageView fx:id="iv0" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1.35;">
+                     <image>
+                        <Image url="@../../../media/btn0.png" />
+                     </image></ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="btnPoint" mnemonicParsing="false" onMouseClicked="#mouseActionButtonsNumbers" onMouseEntered="#mouseEnterButtons" onMouseExited="#mouseExitButtons" style="-fx-background-color: transparent; -fx-scale-x: 0.36; -fx-scale-y: 0.49;" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <graphic>
+                  <ImageView fx:id="ivPoint" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1.35;">
+                     <image>
+                        <Image url="@../../../media/btn..png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </GridPane>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+   </padding>
+</VBox>
