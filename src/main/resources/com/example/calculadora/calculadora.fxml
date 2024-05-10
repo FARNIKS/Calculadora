@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox minHeight="500.0" minWidth="350.0" prefHeight="616.0" prefWidth="404.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calculadora.CalculadoraController">
+<VBox minHeight="500.0" minWidth="350.0" prefHeight="616.0" prefWidth="404.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calculadora.controller.CalculadoraController">
    <children>
       <HBox alignment="CENTER_LEFT" focusTraversable="true" prefHeight="37.0" prefWidth="364.0">
          <children>
