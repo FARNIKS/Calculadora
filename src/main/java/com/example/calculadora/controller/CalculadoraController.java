@@ -160,15 +160,26 @@ public class CalculadoraController {
             }
         }
         if (sourceButton == btnEqual) {
-            if (oldSymbol.equals("-")) subtract();
-            if (oldSymbol.equals("+")) add();
-            if (oldSymbol.equals("*")) multiply();
-            if (oldSymbol.equals("/")) divide();
+            newNumber = Double.parseDouble(screenNumber);
+            if (!screenNumber.isEmpty()&&oldSymbol.isEmpty()){
+                if (numberNegative.equals("-")) {
+                    oldNumber -= newNumber;
+                } else {
+                    oldNumber += newNumber;
+                }
+                result=oldNumber;
+            }else {
+                if (oldSymbol.equals("-")) subtract();
+                if (oldSymbol.equals("+")) add();
+                if (oldSymbol.equals("*")) multiply();
+                if (oldSymbol.equals("/")) divide();
+            }
+
 
             oldSymbol = "";
             screenNumber = "";
             numberNegative = "";
-            counterContinueOperation = 1;
+            counterContinueOperation = 2;
             txfResult.setText(String.valueOf(result));
             labelOperationSing.setText(oldSymbol);
 
@@ -212,7 +223,7 @@ public class CalculadoraController {
             if (!screenNumber.isEmpty() && counterC == 1) {
                 labelOperationSing.setText("");
                 firstNumber = true;
-                counterContinueOperation = 1;
+                counterContinueOperation = 0;
 
             } else if (screenNumber.isEmpty() && oldSymbol.isEmpty() || counterC == 2) {
                 txfResult.setText(screenNumber);
@@ -245,6 +256,7 @@ public class CalculadoraController {
                     } else {
                         oldNumber += newNumber;
                     }
+                    result=oldNumber;
                     firstNumber = false;
                 } else if (counterContinueOperation >= 2) {
                     result -= newNumber;
@@ -274,6 +286,7 @@ public class CalculadoraController {
                     } else {
                         oldNumber += newNumber;
                     }
+                    result=oldNumber;
                     firstNumber = false;
                 } else if (counterContinueOperation >= 2) {
                     result *= newNumber;
@@ -301,11 +314,11 @@ public class CalculadoraController {
                 if (counterContinueOperation == 1) {
                     if (numberNegative.equals("-")) {
                         oldNumber -= newNumber;
-                        firstNumber = false;
                     } else {
                         oldNumber += newNumber;
-                        firstNumber = false;
                     }
+                    result=oldNumber;
+                    firstNumber = false;
                 } else if (counterContinueOperation >= 2) {
                     result /= newNumber;
                 }
@@ -333,6 +346,7 @@ public class CalculadoraController {
                     } else {
                         oldNumber += newNumber;
                     }
+                    result=oldNumber;
                     firstNumber = false;
                 } else if (counterContinueOperation >= 2) {
                     result += newNumber;
