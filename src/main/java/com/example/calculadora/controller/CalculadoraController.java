@@ -16,7 +16,7 @@ public class CalculadoraController {
     private Button btn0, btn00, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnPoint, btnDelete, btnC, btnDivide, btnMultiply, btnSubtract, btnAdd, btnEqual, btnMode;
 
     @FXML
-    private ImageView ivC, iv0, iv00, iv1, iv2, iv3, iv4, iv5, iv6, iv7, iv8, iv9, iv10, ivDivide, ivPoint, ivSubtract, ivAdd, ivEqual, ivDelete, ivMultiply, ivMode, ivFondo;
+    private ImageView ivC, iv0, iv00, iv1, iv2, iv3, iv4, iv5, iv6, iv7, iv8, iv9, ivDivide, ivPoint, ivSubtract, ivAdd, ivEqual, ivDelete, ivMultiply, ivMode, ivFondo;
 
     @FXML
     private TextField txfOperation, txfResult;
