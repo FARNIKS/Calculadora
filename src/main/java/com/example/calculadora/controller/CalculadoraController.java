@@ -77,8 +77,8 @@ public class CalculadoraController {
 
         txfOperation.setText(screenNumber);
 
-
-        System.out.println("Numero enn pantalla " + screenNumber);
+        /*
+        System.out.println("Numero enn pantalla " + screenNumber);*/
     }
     public void mouseClickedButtonsOperations(MouseEvent mouseEvent) {
         Button sourceButton = (Button) mouseEvent.getSource();
@@ -186,12 +186,12 @@ public class CalculadoraController {
 
         }
 
-
+        /* print properties calculator
         System.out.println("Ultimosigno " + oldSymbol);
         System.out.println("numero negativo " + numberNegative);
         System.out.println("old number " + oldNumber);
         System.out.println("new number " + oldNumber);
-        System.out.println("resultado " + result);
+        System.out.println("resultado " + result);*/
 
         txfOperation.setText(screenNumber);
         labelNumberNegative.setText(numberNegative);
