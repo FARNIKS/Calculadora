@@ -77,8 +77,8 @@ public class CalculadoraController {
 
         txfOperation.setText(screenNumber);
 
-        /*Print screen number
-        System.out.println("Numero enn pantalla " + screenNumber);*/
+
+        System.out.println("Numero enn pantalla " + screenNumber);
     }
     public void mouseClickedButtonsOperations(MouseEvent mouseEvent) {
         Button sourceButton = (Button) mouseEvent.getSource();
@@ -111,17 +111,18 @@ public class CalculadoraController {
                     divide();
                 } else if (oldSymbol.equals("*")) {
                     multiply();
-                }
-                if (screenNumber.isEmpty()&&result==0) {
+                }else if (screenNumber.isEmpty()&&result==0) {
                     numberNegative = "-";
                     labelNumberNegative.setText(numberNegative);
 
                 } else {
                     subtract();
+                }
+
                     oldSymbol = "-";
                     screenNumber = "";
                     labelNumberNegative.setText("");
-                }
+
 
 
             } else if (sourceButton == btnMultiply) {
@@ -185,14 +186,13 @@ public class CalculadoraController {
 
         }
 
-        /* print properties calculator
+
         System.out.println("Ultimosigno " + oldSymbol);
         System.out.println("numero negativo " + numberNegative);
         System.out.println("old number " + oldNumber);
         System.out.println("new number " + oldNumber);
         System.out.println("resultado " + result);
-        System.out.println("contador " + contContinueOperation);
-         */
+
         txfOperation.setText(screenNumber);
         labelNumberNegative.setText(numberNegative);
         labelOperationSing.setText(oldSymbol);
